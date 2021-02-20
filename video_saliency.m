@@ -1,7 +1,8 @@
 
-%% Bonus 2: copmute video saliency using Phase Discrephancy method
+%% Concrete example 2: compute video saliency using Phase Discrephancy method
 % B. Zhou, X. Hou and L. Zhang. "A phase discrepancy analysis of object motion. " 
 % Proceedings of 10th Asian Conference on Computer Vision (ACCV), 2010.
+% check accv2020.pdf
 
 % mkdir frames
 % ffmpeg -i test.mp4 -q:v 1 frame/image-%4d.jpg
@@ -10,7 +11,7 @@ clear
 dataPath='frames/';  % the path of video frames
 mFrame=5;                    % the number of consecutive saliency maps combined 
 
-%% initial processing
+%% initialization
 reScale=[120 160];
 imgDir = dir(dataPath);
 imgDir = imgDir(4:end);
