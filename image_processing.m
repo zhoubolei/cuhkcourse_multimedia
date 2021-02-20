@@ -4,7 +4,7 @@ img = imread('test.jpg');
 imshow(img);
 size(img);
 
-img_in = imresize(img, 0.4);
+img_in = imresize(img, 0.6);
 img_grey = rgb2gray(img_in);
 
 

@@ -2,7 +2,7 @@ img = imread('test.jpg');
 imshow(img);
 size(img);
 
-img_in = imresize(img, 0.1);
+img_in = imresize(img, 0.3);
 img_grey = rgb2gray(img_in);
 
 %% DCT transform
@@ -28,7 +28,3 @@ Y_shift = fftshift(Y);
 % visualize the log spectrum curve
 figure, surf(log(abs(Y_shift)));
 
-%% bonus: image saliency algorithms
-img_sal_in = im2double(img_in);
-[salMap] = SRsaliency(img_in);
-figure, montage({img_sal_in, salMap});
