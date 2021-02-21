@@ -1,6 +1,6 @@
 %% start
 
-img = im2double(imread('test.jpg'));
+img = im2double(imread('data/test.jpg'));
 
 img_in = imresize(img, 0.5);
 img_grey = rgb2gray(img_in);

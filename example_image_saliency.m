@@ -4,7 +4,7 @@
 % Proceedings of Computer Vision and Pattern Recognition (CVPR), 2007.
 % check cvpr2007.pdf
 
-img = imread('test.jpg');
+img = imread('data/test.jpg');
 img_in = imresize(img, 0.5);
 
 img_sal_in = im2double(img_in);

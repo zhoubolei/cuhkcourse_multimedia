@@ -4,8 +4,9 @@
 % Proceedings of 10th Asian Conference on Computer Vision (ACCV), 2010.
 % check accv2020.pdf
 
-% mkdir frames
-% ffmpeg -i test.mp4 -q:v 1 frame/image-%4d.jpg
+% decode video into frames first
+% mkdir data/frames
+% ffmpeg -i data/test.mp4 -q:v 1 data/frames/image-%4d.jpg
 
 clear
 dataPath='frames/';  % the path of video frames

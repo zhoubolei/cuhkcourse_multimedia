@@ -1,6 +1,6 @@
 %% start
 
-img = imread('test.jpg');
+img = imread('data/test.jpg');
 imshow(img);
 size(img);
 
