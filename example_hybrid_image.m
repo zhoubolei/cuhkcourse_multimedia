@@ -16,6 +16,7 @@ second_image=im2double(imread(second_image_path));
 % create a lowpass filter (try different cutoff-freqency
 cutoff_frequency = 3;
 filter = fspecial('Gaussian', [cutoff_frequency*4+1], cutoff_frequency);
+%figure, surf(filter)
 
 low_frequencies = imfilter(first_image, filter);
 high_frequencies = second_image - imfilter(second_image, filter);
