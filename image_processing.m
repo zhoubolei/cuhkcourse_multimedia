@@ -5,7 +5,7 @@ imshow(img);
 size(img);
 
 img_in = imresize(img, 0.6);
-img_grey = rgb2gray(img_in);
+img_gray = rgb2gray(img_in);
 
 
 %% color space conversion
@@ -14,9 +14,9 @@ figure, imshow(ycbcrmap);
 imshow(squeeze(ycbcrmap(:,:,2)));
 
 %% image enhancement
-img_test = img_grey*0.5;
+img_test = img_gray*0.5;
 figure, imhist(img_test);
-img_histeq = histeq(img_grey); % match uniform distribution
+img_histeq = histeq(img_gray); % match uniform distribution
 figure, imhist(img_histeq);
 figure, montage({img_test, img_histeq})
 
@@ -30,7 +30,7 @@ img_edge = edge(rgb2gray(img_in), 'Canny');
 imshow(img_edge);
 
 %% denoising
-img_noise = imnoise(img_grey,'salt & pepper',0.05);
+img_noise = imnoise(img_gray,'salt & pepper',0.05);
 imshow(img_noise)
 
 % median filtering
