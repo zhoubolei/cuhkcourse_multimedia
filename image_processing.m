@@ -10,7 +10,7 @@ img_grey = rgb2gray(img_in);
 
 %% color space conversion
 ycbcrmap = rgb2ycbcr(img_in);
-imshow(ycbcrmap);
+figure, imshow(ycbcrmap);
 imshow(squeeze(ycbcrmap(:,:,2)));
 
 %% image enhancement
@@ -21,9 +21,9 @@ figure, imhist(img_histeq);
 figure, montage({img_test, img_histeq})
 
 %% filtering
-h = fspecial('average', [10, 10]);
+h = fspecial('gaussian', [20, 20]);
 img_out = imfilter(img_in, h);
-imshow([img_in img_out]);
+figure, imshow([img_in img_out]);
 
 % edge detection
 img_edge = edge(rgb2gray(img_in), 'Canny');
