@@ -1,3 +1,3 @@
-# Code examples for IERG4190/IEMS5707
+# Code examples for Matlab
 
 Matlab examples and introduction to ffmpeg.
